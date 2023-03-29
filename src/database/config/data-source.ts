@@ -12,9 +12,9 @@ const options: DataSourceOptions & SeederOptions = {
   username: process.env.DB_USER,
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
-  synchronize: true,
-  entities: [`${__dirname}/../entities/*.{ts,js}`],
-  migrations: [`${__dirname}/../migrations/*.{ts,js}`],
+  // synchronize: true,
+  entities: [`${__dirname}/../**/entities/*.{ts,js}`],
+  migrations: [`${__dirname}/../**/migrations/*.{ts,js}`],
   seeds: [MainSeeder],
 }
 
